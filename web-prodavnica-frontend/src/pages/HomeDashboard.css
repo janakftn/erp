@@ -1,0 +1,107 @@
+﻿/* ======== HOME DASHBOARD ======== */
+.admin-home {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+    .empty-state h2 {
+        font-size: 26px;
+        color: #ff6f91;
+        margin-bottom: 15px;
+    }
+
+    .empty-state p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+.add-btn, .see-btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    color: #fff;
+    background: linear-gradient(135deg, #ff6f91, #ff9671);
+    transition: all 0.3s ease;
+}
+
+    .add-btn:hover, .see-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+/* ======== SUMMARY ======== */
+.summary {
+    text-align: center;
+}
+
+    .summary h2 {
+        font-size: 28px;
+        color: #ff6f91;
+        margin-bottom: 10px;
+    }
+
+    .summary p {
+        font-size: 16px;
+        color: #555;
+    }
+
+/* ======== PRODUCT GRID ======== */
+.product-list-wrapper {
+    width: 100%;
+}
+
+.product-list {
+    display: grid !important; /* !important da nadjača moguće inline/flex stilove */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/*  PRODUCT CARD  */
+.product-card {
+    width: 200px !important;
+    flex: none !important; 
+}
+
+    .product-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+.product-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.product-card h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ff6f91;
+}
+
+.product-card p, .product-card b {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #555;
+}

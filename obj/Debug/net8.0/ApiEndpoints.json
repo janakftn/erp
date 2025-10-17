@@ -1,0 +1,262 @@
+[
+  {
+    "ContainingType": "WebProdavnica.Controllers.AutorizacijaController",
+    "Method": "Login",
+    "RelativePath": "api/Autorizacija/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDTO",
+        "Type": "WebProdavnica.DTOs.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebProdavnica.DTOs.LoginResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebProdavnica.Controllers.AutorizacijaController",
+    "Method": "Register",
+    "RelativePath": "api/Autorizacija/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerDTO",
+        "Type": "WebProdavnica.DTOs.RegisterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebProdavnica.Controllers.StripeController",
+    "Method": "CreateCheckoutSession",
+    "RelativePath": "api/Stripe/create-checkout-session",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "amount",
+        "Type": "System.Decimal",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebProdavnica.Controllers.StripeController",
+    "Method": "StripeWebhook",
+    "RelativePath": "api/Stripe/webhook",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebProdavnica.Controllers.UserController",
+    "Method": "KupiProizvodeKartica",
+    "RelativePath": "api/User/Card",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "kupiProizvodDTO",
+        "Type": "WebProdavnica.DTOs.BuyProductDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebProdavnica.DTOs.CardPaymentDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebProdavnica.Controllers.UserController",
+    "Method": "KupiProizvodeKes",
+    "RelativePath": "api/User/Cash",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "kupiProizvodDTO",
+        "Type": "WebProdavnica.DTOs.BuyProductDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebProdavnica.Controllers.UserController",
+    "Method": "FiltrirajProizvode",
+    "RelativePath": "api/User/filtirani-proizvodi",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cena",
+        "Type": "System.Nullable\u00601[[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "boja",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "brend",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebProdavnica.Controllers.UserController",
+    "Method": "GetProizvode",
+    "RelativePath": "api/User/products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebProdavnica.Controllers.WorkerController",
+    "Method": "DodajDobavljaca",
+    "RelativePath": "api/Worker/dobavljaci",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Ime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Prezime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Kontakt",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebProdavnica.Controllers.WorkerController",
+    "Method": "PregledajSvePorudzbine",
+    "RelativePath": "api/Worker/porudzbine",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebProdavnica.Controllers.WorkerController",
+    "Method": "PreuzmiPorudzbinu",
+    "RelativePath": "api/Worker/porudzbine",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idPorudzbine",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebProdavnica.Controllers.WorkerController",
+    "Method": "PregledajPorudzbineKojeCekajuDaSePreuzmu",
+    "RelativePath": "api/Worker/porudzbine-za-prijem",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebProdavnica.Controllers.WorkerController",
+    "Method": "PregledajSveProdaje",
+    "RelativePath": "api/Worker/prodaje",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebProdavnica.Controllers.WorkerController",
+    "Method": "GetProizvode",
+    "RelativePath": "api/Worker/products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebProdavnica.Controllers.WorkerController",
+    "Method": "DodajProizvod",
+    "RelativePath": "api/Worker/proizvodi",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "kreirajProizvodDTO",
+        "Type": "WebProdavnica.DTOs.CreateProductDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebProdavnica.Controllers.WorkerController",
+    "Method": "PoruciProizvode",
+    "RelativePath": "api/Worker/proizvodi",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "porudzbina",
+        "Type": "WebProdavnica.DTOs.OrderDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

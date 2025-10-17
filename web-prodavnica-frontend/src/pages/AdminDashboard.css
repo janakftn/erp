@@ -1,0 +1,289 @@
+﻿/* ======== GLOBAL ======== */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* ======== ADMIN DASHBOARD LAYOUT ======== */
+.admin-dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ======== SIDEBAR ======== */
+.admin-sidebar {
+    width: 240px;
+    background: #1e1e2f;
+    color: #fff;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+    .admin-sidebar h2 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 15px;
+        color: #ff6f91;
+    }
+
+    .admin-sidebar nav {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+        .admin-sidebar nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 15px;
+            border-radius: 10px;
+            font-weight: 500;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+            .admin-sidebar nav a:hover {
+                background: #34344a;
+            }
+
+/* ======== MAIN CONTENT ======== */
+.admin-content {
+    flex: 1;
+    padding: 30px 40px;
+    overflow-y: auto;
+}
+
+    /* ======== HEADINGS ======== */
+    .admin-content h1 {
+        font-size: 28px;
+        color: #ff6f91;
+        margin-bottom: 25px;
+    }
+
+/* ======== ADMIN FORM ======== */
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 450px;
+    margin-bottom: 30px;
+}
+
+    .admin-form input,
+    .admin-form button {
+        padding: 12px;
+        border-radius: 10px;
+        font-size: 15px;
+        border: 1px solid #ccc;
+    }
+
+    .admin-form button {
+        background: #ff6f91;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .admin-form button:hover {
+            background: #ff4f70;
+        }
+
+/* ERRORS */
+.errors, .admin-products > div[style] {
+    color: #d9534f;
+    margin-bottom: 10px;
+}
+
+/* ======== PRODUCTS GRID ======== */
+.products-grid,
+.product-list-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: 0.25s;
+}
+
+    .product-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .product-card img {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        margin-bottom: 10px;
+        border-radius: 12px;
+    }
+
+    .product-card h3 {
+        color: #ff6f91;
+        font-size: 18px;
+        margin: 8px 0;
+    }
+
+    .product-card p, .product-card b {
+        font-size: 14px;
+        color: #555;
+    }
+
+/* ======== HOME DASHBOARD ======== */
+.admin-home {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 30px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+    .empty-state h2 {
+        font-size: 28px;
+        color: #ff6f91;
+        margin-bottom: 15px;
+    }
+
+    .empty-state p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 25px;
+    }
+
+.add-btn, .see-btn {
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(135deg, #ff6f91, #ff9671);
+    transition: all 0.3s ease;
+}
+
+    .add-btn:hover, .see-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+.summary {
+    text-align: center;
+}
+
+    .summary h2 {
+        font-size: 28px;
+        color: #ff6f91;
+        margin-bottom: 12px;
+    }
+
+    .summary p {
+        font-size: 16px;
+        color: #555;
+    }
+
+/* ======== ORDERS GRID ======== */
+.orders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 20px;
+}
+
+.order-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.order-status {
+    padding: 4px 10px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.order-products .product-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.order-products img {
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.order-actions button {
+    margin-right: 10px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-delivered {
+    background: #5cb85c;
+    color: #fff;
+}
+
+    .btn-delivered:hover {
+        opacity: 0.85;
+    }
+
+.btn-cancel {
+    background: #d9534f;
+    color: #fff;
+}
+
+    .btn-cancel:hover {
+        opacity: 0.85;
+    }
+
+.btn-delete {
+    background: #6c757d;
+    color: #fff;
+}
+
+    .btn-delete:hover {
+        opacity: 0.85;
+    }

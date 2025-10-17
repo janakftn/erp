@@ -1,0 +1,41 @@
+﻿.floating-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1; /* ispod navbar-a i sadržaja */
+}
+
+.floating-img {
+    position: absolute;
+    object-fit: cover;
+    border-radius: 10px;
+    animation: floatX linear infinite, floatY ease-in-out infinite alternate;
+}
+
+@keyframes floatX {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(500px) rotate(360deg);
+    }
+}
+
+@keyframes floatY {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

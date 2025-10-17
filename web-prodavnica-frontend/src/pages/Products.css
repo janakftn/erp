@@ -1,0 +1,98 @@
+﻿.products-wrapper {
+    padding: 20px;
+}
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+.product-image img {
+    width: 150px !important;
+    height: 150px !important;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.edit-btn,
+.delete-btn,
+.add-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.edit-btn {
+    background: #2196F3;
+    color: #fff;
+}
+
+.edit-btn:hover {
+    background: #1976D2;
+    transform: translateY(-2px);
+}
+
+.delete-btn {
+    background: #F44336;
+    color: #fff;
+}
+
+.delete-btn:hover {
+    background: #E53935;
+    transform: translateY(-2px);
+}
+
+.add-btn {
+    background: #4CAF50;
+    color: white;
+}
+
+.add-btn:hover {
+    background: #45A049;
+    transform: translateY(-2px);
+}
+
+/* promena za text */
+.product-card h3 {
+    margin: 8px 0;
+    font-size: 18px;
+}
+
+.product-card p,
+.product-card b {
+    margin: 4px 0;
+    font-size: 14px;
+}
